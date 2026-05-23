@@ -65,6 +65,28 @@ All validation, permission checks and execution decisions are handled determinis
 
 ---
 
+## Deterministic Context Control
+
+DAGE does not only control tool execution.
+
+The architecture also deterministically controls:
+
+- system prompts
+- user isolation
+- RAG retrieval
+- memory access
+- document injection
+- tool responses
+- context assembly
+- conversation history
+- external knowledge inclusion
+
+The language model never determines, modifies or authorizes its own security-relevant context.
+
+All context construction and filtering is performed deterministically by the DAGE gateway layer.
+
+---
+
 ## High-Level Architecture
 
 ```text
